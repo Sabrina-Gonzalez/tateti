@@ -60,7 +60,7 @@ function seleccionarOpcion() {
     3) Mostrar el primer juego ganador
     4) Mostrar porcentaje de juegos ganados 
     5) Mostrar resumen de jugador 
-    6) Mostrar listado de juegos ordenado por jugador
+    6) Mostrar listado de juegos ordenado por jugador O
     7) Salir
     
     Elegir una Opcion: ";
@@ -73,6 +73,32 @@ function seleccionarOpcion() {
     return $opcionElegida;
 }
 
+/**PUNTO 3 (falta*/
+
+
+
+
+
+
+
+
+
+
+
+/**PUNTO 4 (Falta agregar cosas)
+ * Muestra los datos de un juego
+ * @param int $numeroJuego
+ * @param array $coleccionJuegos
+ */
+function muestraUnJuego($numeroJuego,$coleccionJuegos){
+    $cant=count($coleccionJuegos);
+    echo "Juego TATETI: ".$numeroJuego. "";
+    echo "Jugador X: ".$coleccionJuegos[$numeroJuego]["jugadorCruz"]." obtuvo ".$coleccionJuegos[$numeroJuego]["puntosCruz"]." puntos";
+    echo "Jugador O: ".$coleccionJuegos[$numeroJuego]["jugadorCirculo"]." obtuvo ".$coleccionJuegos[$numeroJuego]["puntosCirculo"]." puntos";
+    if ($numeroJuego<$cant || $numeroJuego>$cant){
+        echo "ERROR. Vuelva a ingresar un numero:";
+    }
+}
 
 
 /**************************************/
