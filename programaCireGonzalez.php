@@ -45,7 +45,7 @@ print_r($juegos);
 
 
 
-// FUNCION 2  (este esta incompleto y hay que revisar algunas cosas que faltan
+// FUNCION 2  (este esta incompleto y hay que revisar algunas cosas que faltan)
 
 function seleccionarOpcion() {
     //incializacion de variable boolean en false
