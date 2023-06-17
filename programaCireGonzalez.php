@@ -34,12 +34,10 @@ function cargarJuegos() {
     $coleccionJuegos[] = ["jugadorCruz" => "david", "jugadorCirculo" => "sofi", "puntosCruz" => 5, "puntosCirculo" => 0];
     
 
-    // Puedes agregar más juegos según tus necesidades
-
     return $coleccionJuegos;
 }
 
-// Ejemplo de uso
+// uso de la funcion
 $juegos = cargarJuegos();
 print_r($juegos);
 
