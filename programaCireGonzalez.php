@@ -15,7 +15,7 @@ include_once("tateti.php");
 /**************************************/
 /***** DEFINICION DE FUNCIONES ********/
 /**************************************/
-
+// FUNCION 1
 <?php
 function cargarJuegos() {
     //incializacion del arrays
@@ -37,11 +37,34 @@ function cargarJuegos() {
     return $coleccionJuegos;
 }
 
-// uso de la funcion
+// uso de la llamada a la funcion
 $juegos = cargarJuegos();
+//se imprime el contenido de la variable $juegos
 print_r($juegos);
 
 
+
+
+// FUNCION 2  (este esta incompleto y hay que revisar algunas cosas que faltan
+
+function seleccionarOpcion() {
+    //incializacion de variable boolean en false
+    $opcionValida = false;
+    
+    $opciones = ["Jugar al tateti", "Mostrar un juego","Mostrar el primer juego ganador",
+        "Mostrar porcentaje de juegos ganados", "Mostrar resumen de jugador", 
+        "Mostrar listado de juegos ordenado por jugador","Salir"];
+
+ 
+    
+    while ($opcionValida = true) {
+        // Mostrar opciones del menú
+        echo "Menú de opciones:\n";
+
+
+        for ($i = 1; $i <= count($opciones); $i++) {
+            echo "$i) $opciones[$i-1]\n";
+        }
 
 
 
