@@ -84,21 +84,37 @@ function seleccionarOpcion() {
 
 
 
-
-/**PUNTO 4 (Falta agregar cosas)
+/**PUNTO 4 (Revisar)
  * Muestra los datos de un juego
  * @param int $numeroJuego
  * @param array $coleccionJuegos
  */
 function muestraUnJuego($numeroJuego,$coleccionJuegos){
+    //int $cant 
     $cant=count($coleccionJuegos);
-    echo "Juego TATETI: ".$numeroJuego. "";
+    if ($coleccionJuegos[$numeroJuego]["puntosCruz"] > $coleccionJuegos[$numeroJuego]["puntosCirculo"]){
+        echo "Juego TATETI: ".$numeroJuego. " (gano X)";
+    }elseif ($coleccionJuegos[$numeroJuego]["puntosCruz"] < $coleccionJuegos[$numeroJuego]["puntosCirculo"]) {
+        echo "Juego TATETI: ".$numeroJuego. " (gano O)";
+    }else {
+        echo "Juego TATETI: ".$numeroJuego. " (empate)";
+    }
+
     echo "Jugador X: ".$coleccionJuegos[$numeroJuego]["jugadorCruz"]." obtuvo ".$coleccionJuegos[$numeroJuego]["puntosCruz"]." puntos";
     echo "Jugador O: ".$coleccionJuegos[$numeroJuego]["jugadorCirculo"]." obtuvo ".$coleccionJuegos[$numeroJuego]["puntosCirculo"]." puntos";
     if ($numeroJuego<$cant || $numeroJuego>$cant){
         echo "ERROR. Vuelva a ingresar un numero:";
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 /**************************************/
