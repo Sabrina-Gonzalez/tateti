@@ -150,10 +150,9 @@ function buscarPrimerJuegoGanado ($coleccionJuegos, $nombreJugador){
     foreach ($coleccionJuegos as $indice => $juego) {
 
         //determina si un jugador ha ganado un juego en un índice específico de la colección de juegos.
-    
         if ($juego["jugadorCruz"] == $Nombrejugador && $juego["puntosCruz"] > $juego["puntosCirculo"]) {
             return $indice;
-        } elseif ($juego["jugadorCirculo"] === $nombreJugador && $juego["puntosCirculo"] > $juego["puntosCruz"]) {
+        } elseif ($juego["jugadorCirculo"] == $nombreJugador && $juego["puntosCirculo"] > $juego["puntosCruz"]) {
             return $indice;
         }
     }
