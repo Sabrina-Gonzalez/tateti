@@ -15,6 +15,7 @@ include_once("tateti.php");
 /**************************************/
 /***** DEFINICION DE FUNCIONES ********/
 /**************************************/
+
 /**FUNCION 1
  * Inicializa y retorna una coleccion de juegos
  * @return array
@@ -77,8 +78,8 @@ function seleccionarOpcion() {
 
 
 /**Punto 3
- * Retorna un numero valido
- *@param $min, $max
+ * Retorna un numero valido segun el rango
+ *@param int $min, $max
  * @return int
  */
 
@@ -99,11 +100,8 @@ function solicitarNumeroEnRango($min, $max) {
     return $numero;
 }
 
-// Ejemplo de uso
-$minimo = 1;
-$maximo = 100;
-$numeroIngresado = solicitarNumeroEnRango($minimo, $maximo);
-echo "Número válido ingresado: $numeroIngresado\n";
+
+
 
 
 
@@ -118,11 +116,11 @@ function muestraUnJuego($numeroJuego,$coleccionJuegos){
     //int $cant 
     $cant=count($coleccionJuegos);
     if ($coleccionJuegos[$numeroJuego]["puntosCruz"] > $coleccionJuegos[$numeroJuego]["puntosCirculo"]){
-        echo "Juego TATETI: ".$numeroJuego. " (gano X)";
+        echo "Juego TATETI: ".$numeroJuego. " (gano X) \n";
     }elseif ($coleccionJuegos[$numeroJuego]["puntosCruz"] < $coleccionJuegos[$numeroJuego]["puntosCirculo"]) {
-        echo "Juego TATETI: ".$numeroJuego. " (gano O)";
+        echo "Juego TATETI: ".$numeroJuego. " (gano O) \n";
     }else {
-        echo "Juego TATETI: ".$numeroJuego. " (empate)";
+        echo "Juego TATETI: ".$numeroJuego. " (empate) \n";
     }
 
     echo "Jugador X: ".$coleccionJuegos[$numeroJuego]["jugadorCruz"]." obtuvo ".$coleccionJuegos[$numeroJuego]["puntosCruz"]." puntos";
@@ -135,6 +133,14 @@ function muestraUnJuego($numeroJuego,$coleccionJuegos){
 
 
 
+/**PUNTO 5 
+ * agrega nuevo juego
+ * @param int $numeroJuego
+ *
+ */
+function agregarJuego (){
+    
+}
 
 
 
