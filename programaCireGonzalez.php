@@ -41,10 +41,7 @@ function cargarJuegos() {
     return $coleccionJuegos;
 }
 
-// uso de la llamada a la funcion
-$juegos = cargarJuegos();
-//se imprime el contenido de la variable $juegos
-print_r($juegos);
+
 
 
 
@@ -135,14 +132,35 @@ function muestraUnJuego($numeroJuego,$coleccionJuegos){
 
 /**PUNTO 5 
  * agrega nuevo juego
- * @param int $numeroJuego
- *
+ * @param string $coleccionJuegos, $nuevoJuego
+ *@retur string
  */
-function agregarJuego (){
-    
+function agregarJuego ($coleccionJuegos, $nuevoJuego){
+     $coleccionJuegos[] = $nuevoJuego;
+     return $coleccionJuegos;
 }
 
+/**PUNTO 6
+ * Dada una colección de juegos y el nombre de un jugador, retorne el índice del primer juego ganado por dicho jugador
+ * @param string $coleccionJuegos, $nombreJugador
+ *@retur int
+ */
+function buscarPrimerJuegoGanado ($coleccionJuegos, $nombreJugador){
+    //$indice
+    foreach ($coleccionJuegos as $indice => $juego) {
 
+        //determina si un jugador ha ganado un juego en un índice específico de la colección de juegos.
+    
+        if ($juego["jugadorCruz"] == $Nombrejugador && $juego["puntosCruz"] > $juego["puntosCirculo"]) {
+            return $indice;
+        } elseif ($juego["jugadorCirculo"] === $nombreJugador && $juego["puntosCirculo"] > $juego["puntosCruz"]) {
+            return $indice;
+        }
+    }
+    
+    return -1; // Jugador no ganó ningún juego
+   
+}
 
 
 
