@@ -73,12 +73,37 @@ function seleccionarOpcion() {
     return $opcionElegida;
 }
 
-/**PUNTO 3 (falta*/
 
 
 
+/**Punto 3
+ * Retorna un numero valido
+ *@param $min, $max
+ * @return int
+ */
 
+function solicitarNumeroEnRango($min, $max) {
+    $numeroValido = false;
 
+    while ($numeroValido=true) {
+       echo ("Ingrese un número entre $min y $max: ");
+         $numero = trim(fgets(STDIN));
+
+        if ($numero >= $min && $numero <= $max) {
+            $numeroValido = true;
+        } else {
+            echo "Número inválido. Por favor, ingrese un número válido dentro del rango.\n";
+        }
+    }
+
+    return $numero;
+}
+
+// Ejemplo de uso
+$minimo = 1;
+$maximo = 100;
+$numeroIngresado = solicitarNumeroEnRango($minimo, $maximo);
+echo "Número válido ingresado: $numeroIngresado\n";
 
 
 
