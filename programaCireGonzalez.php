@@ -76,7 +76,8 @@ function seleccionarOpcion() {
 
 /**Punto 3
  * Retorna un numero valido segun el rango
- *@param int $min, $max
+ *@param int $min 
+ *@param int $max
  * @return int
  */
 
@@ -96,11 +97,6 @@ function solicitarNumeroEnRango($min, $max) {
 
     return $numero;
 }
-
-
-
-
-
 
 
 
@@ -150,7 +146,7 @@ function buscarPrimerJuegoGanado ($coleccionJuegos, $nombreJugador){
     foreach ($coleccionJuegos as $indice => $juego) {
 
         //determina si un jugador ha ganado un juego en un índice específico de la colección de juegos.
-        if ($juego["jugadorCruz"] == $Nombrejugador && $juego["puntosCruz"] > $juego["puntosCirculo"]) {
+        if ($juego["jugadorCruz"] == $nombreJugador && $juego["puntosCruz"] > $juego["puntosCirculo"]) {
             return $indice;
         } elseif ($juego["jugadorCirculo"] == $nombreJugador && $juego["puntosCirculo"] > $juego["puntosCruz"]) {
             return $indice;
@@ -161,6 +157,30 @@ function buscarPrimerJuegoGanado ($coleccionJuegos, $nombreJugador){
    
 }
 
+
+
+
+
+
+
+
+
+
+
+  /**PUNTO 8
+  * Solicita al usuario un simbolo (X/O) y retorna el simbolo elegido
+  *@return string
+  */
+  function simboloElegido(){
+    //string $simbolo
+    echo "Elija un simbolo (X o O):";
+    $simbolo=trim(fgets(STDIN));
+    while (!($simbolo=="x"|| $simbolo=="o")){
+        echo "Elija un simbolo (X o O):";
+        $simbolo=trim(fgets(STDIN));
+    };
+    return $simbolo;
+  }
 
 
 
