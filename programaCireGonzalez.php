@@ -100,7 +100,7 @@ function solicitarNumeroEnRango($min, $max) {
 
 
 
-/**PUNTO 4 (Revisar)
+/**PUNTO 4
  * Muestra los datos de un juego
  * @param int $numeroJuego
  * @param array $coleccionJuegos
