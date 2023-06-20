@@ -167,7 +167,7 @@ function buscarPrimerJuegoGanado ($coleccionJuegos, $nombreJugador){
 
 
 
-<?php
+
 /**PUNTO 7
   *  este modulo obtiene el resumen del jugador
   *@return string
@@ -228,7 +228,27 @@ function obtenerResumenJugador($coleccionJuegos, $jugador) {
         $simbolo=trim(fgets(STDIN));
     };
     return $simbolo;
-  }
+}
+
+
+/**PUNTO 9
+ *Retorna la cantidad de juegos ganados (sin importar si es X o O)
+ *@param array $coleccionJuegos
+ *@return int 
+ */
+function cantJuegosGanados($coleccionJuegos){
+    //$cantGanados
+    $cantGanados=0;
+    for ($i=0; $i <count($coleccionJuegos) ; $i++) { 
+        if ($coleccionJuegos[$i]["puntosCruz"]>$coleccionJuegos[$i]["puntosCirculo"] ||$coleccionJuegos[$i]["puntosCirculo"]>$coleccionJuegos[$i]["puntosCruz"] ) {
+            $cantGanados=$cantGanados+1;
+        }
+    }
+    return $cantGanados;
+}
+
+
+
 
 
 
