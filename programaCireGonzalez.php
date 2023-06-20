@@ -197,6 +197,16 @@ function obtenerResumenJugador($coleccionJuegos, $jugador) {
     return $resumenJugador;
 }
 
+// ejemplo de salida 
+/**Array
+(
+    [nombre] => Juan
+    [juegosGanados] => 1
+    [juegosPerdidos] => 1
+    [juegosEmpatados] => 0
+    [puntosAcumulados] => 4
+)
+*/
 
 
 
