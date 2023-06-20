@@ -136,6 +136,9 @@ function agregarJuego ($coleccionJuegos, $nuevoJuego){
      return $coleccionJuegos;
 }
 
+
+
+
 /**PUNTO 6
  * Dada una colección de juegos y el nombre de un jugador, retorne el índice del primer juego ganado por dicho jugador
  * @param string $coleccionJuegos, $nombreJugador
@@ -156,10 +159,6 @@ function buscarPrimerJuegoGanado ($coleccionJuegos, $nombreJugador){
     return -1; // Jugador no ganó ningún juego
    
 }
-
-
-
-
 
 
 
@@ -212,9 +211,6 @@ function obtenerResumenJugador($coleccionJuegos, $jugador) {
 
 
 
-
-
-
   /**PUNTO 8
   * Solicita al usuario un simbolo (X/O) y retorna el simbolo elegido
   *@return string
@@ -229,6 +225,8 @@ function obtenerResumenJugador($coleccionJuegos, $jugador) {
     };
     return $simbolo;
 }
+
+
 
 
 /**PUNTO 9
@@ -246,6 +244,10 @@ function cantJuegosGanados($coleccionJuegos){
     }
     return $cantGanados;
 }
+
+
+
+
 
 
 /**PUNTO 10
