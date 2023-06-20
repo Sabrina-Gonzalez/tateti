@@ -200,7 +200,7 @@ function obtenerResumenJugador($coleccionJuegos, $jugador) {
 // ejemplo de salida 
 /**Array
 (
-    [nombre] => Juan
+    [nombre] => nacho
     [juegosGanados] => 1
     [juegosPerdidos] => 1
     [juegosEmpatados] => 0
