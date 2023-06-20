@@ -254,13 +254,13 @@ function cantJuegosGanados($coleccionJuegos){
  * @param string $simboloXO
  * @return int
  */
-function cantJuegosGanados($coleccion,$simboloXO){
+function cantJuegosGanados($coleccionJuegos,$simboloXO){
     //int $cantidadGanados
     $cantidadGanados=0;
     for ($i=0; $i < count($coleccion); $i++) { 
-        if ($simboloXO=="x" && $coleccion[$i]["puntosCruz"]>$coleccion[$i]["puntosCirculo"]) {
+        if ($simboloXO=="x" && $coleccionJuegos[$i]["puntosCruz"]>$coleccionJuegos[$i]["puntosCirculo"]) {
                 $cantidadGanados=$cantidadGanados+1;
-        }elseif ($simboloXO=="o" && $coleccion[$i]["puntosCirculo"]>$coleccion[$i]["puntosCruz"]) {
+        }elseif ($simboloXO=="o" && $coleccionJuegos[$i]["puntosCirculo"]>$coleccionJuegos[$i]["puntosCruz"]) {
                 $cantidadGanados=$cantidadGanados+1;
     }
     }
