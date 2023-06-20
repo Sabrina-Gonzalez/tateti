@@ -257,7 +257,7 @@ function cantJuegosGanados($coleccionJuegos){
 function cantJuegosGanados($coleccionJuegos,$simboloXO){
     //int $cantidadGanados
     $cantidadGanados=0;
-    for ($i=0; $i < count($coleccion); $i++) { 
+    for ($i=0; $i < count($coleccionJuegos); $i++) { 
         if ($simboloXO=="x" && $coleccionJuegos[$i]["puntosCruz"]>$coleccionJuegos[$i]["puntosCirculo"]) {
                 $cantidadGanados=$cantidadGanados+1;
         }elseif ($simboloXO=="o" && $coleccionJuegos[$i]["puntosCirculo"]>$coleccionJuegos[$i]["puntosCruz"]) {
