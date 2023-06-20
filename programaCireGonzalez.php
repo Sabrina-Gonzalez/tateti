@@ -248,7 +248,24 @@ function cantJuegosGanados($coleccionJuegos){
 }
 
 
-
+/**PUNTO 10
+ * Dada una coleccion de juegos y un simbolo (X o O) retorne la cantidad de juegos ganados por el simbolo ingresado por parametro
+ * @param array $coleccionJuegos
+ * @param string $simboloXO
+ * @return int
+ */
+function cantJuegosGanados($coleccion,$simboloXO){
+    //int $cantidadGanados
+    $cantidadGanados=0;
+    for ($i=0; $i < count($coleccion); $i++) { 
+        if ($simboloXO=="x" && $coleccion[$i]["puntosCruz"]>$coleccion[$i]["puntosCirculo"]) {
+                $cantidadGanados=$cantidadGanados+1;
+        }elseif ($simboloXO=="o" && $coleccion[$i]["puntosCirculo"]>$coleccion[$i]["puntosCruz"]) {
+                $cantidadGanados=$cantidadGanados+1;
+    }
+    }
+    return $cantidadGanados;
+}
 
 
 
