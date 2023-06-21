@@ -133,7 +133,7 @@ function muestraUnJuego($numeroJuego,$coleccionJuegos){
 
 
 
-/**PUNTO 5 
+/**PUNTO 5 (revisar)
  * agrega nuevo juego
  * @param string $coleccionJuegos
  * @param $nuevoJuego
