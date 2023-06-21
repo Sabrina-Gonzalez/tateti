@@ -141,9 +141,13 @@ function muestraUnJuego($numeroJuego,$coleccionJuegos){
  * @param array $nuevoJuego
  * @return array
  */
-function agregarJuego ($coleccionJuegos, $nuevoJuego){
-     $coleccionJuegos[] = $nuevoJuego;
-     return $coleccionJuegos;
+function agregarJuego ($coleccion, $nuevoJuego){
+     
+    
+    
+    //$coleccionJuegos[count($coleccion)] = $nuevoJuego;
+    array_push($coleccion, $nuevoJuego);
+     return $coleccion;
 }
 
 
@@ -190,27 +194,33 @@ function buscarPrimerJuegoGanado ($coleccionJuegos, $nombreJugador){
   *@return string
   */
 function obtenerResumenJugador($coleccionJuegos, $jugador) {
-    $resumenJugador = [ "nombre" => $jugador,"juegosGanados" => 0, "juegosPerdidos" => 0, "juegosEmpatados" => 0, "puntosAcumulados" => 0
+    $resumenJugador = [ 
+        "nombre" => $jugador,
+        "juegosGanados" => 0,
+        "juegosPerdidos" => 0,
+        "juegosEmpatados" => 0,
+        "puntosAcumulados" => 0
     ];
     foreach ($coleccionJuegos as $juego) {// se recorre cada juego de la colección uno por uno y se asigna a la variable $juegos
-        if ($juego["jugadorCruz"] == $jugador && $juego["puntosCruz"] > $juego["puntosCirculo"]) {
-            $resumenJugador["juegosGanados"]= $resumenJugador["juegosGanados"] + 1 ;//contador
+        if ($juego["jugadorCruz"] == $jugador) {
+            //ganò
+            if ($juego["puntosCruz"] > $juego["puntosCirculo"]){
+                $resumenJugador["juegosGanados"]= $resumenJugador["juegosGanados"] + 1
+            } elseif ($juego["puntosCirculo"] > $juego["puntosCruz"]) {//perdiò
+                $resumenJugador["juegosPerdidos"]= $resumenJugador["juegosPerdidos"]+1;
+            } else { //empate
+                $resumenJugador["juegosEmpatados"]= $resumenJugador["juegosEmpatados"]+1;
+            }
+            
             $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"];// acumulador
-        } elseif ($juego["jugadorCirculo"] === $jugador && $juego["puntosCirculo"] > $juego["puntosCruz"]) {
-            $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"] ;
-            $resumenJugador["juegosGanados"]+1;
-             $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"];
-        } elseif ($juego["jugadorCruz"] === $jugador && $juego["puntosCruz"] < $juego["puntosCirculo"]) {
-            $resumenJugador["juegosPerdidos"]= $resumenJugador["juegosGanados"]+1;
- $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"];
-        } elseif ($juego["jugadorCirculo"] === $jugador && $juego["puntosCirculo"] < $juego["puntosCruz"]) {
-            $resumenJugador["juegosPerdidos"]= $resumenJugador["juegosGanados"]+1;
-             $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"];
-        } else {
-            $resumenJugador["juegosEmpatados"]= $resumenJugador["juegosGanados"]+1;
- $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"];
+        
+                
+        //CIRCULO
+        } elseif ($juego["jugadorCirculo"] == $jugador) {
+            
         }
-    }
+            
+    
 
     return $resumenJugador;
 }
@@ -303,21 +313,25 @@ function cantJuegosGanados($coleccionJuegos,$simboloXO){
 
 //Proceso:
 
-$juego = jugar();
+//$juego = jugar();
 //print_r($juego);
 //imprimirResultado($juego);
 
+$coleccionJuegos = cargarJuegos();
 
 
-/*
 do {
-    $opcion = ...;
+    $opcion = solicitarNumeroEntre(1,7);
 
     
     switch ($opcion) {
         case 1: 
             //completar qué secuencia de pasos ejecutar si el usuario elige la opción 1
-
+            $juego = jugar();
+        print_r($juego);
+        print_r($coleccionJuegos);
+        $coleccionJuegos = agregarJuego($coleccionJuegos, $juego);
+            print_r($coleccionJuegos);
             break;
         case 2: 
             //completar qué secuencia de pasos ejecutar si el usuario elige la opción 2
@@ -331,4 +345,3 @@ do {
             //...
     }
 } while ($opcion != X);
-*/
