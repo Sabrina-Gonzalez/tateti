@@ -33,6 +33,8 @@ function cargarJuegos() {
     $coleccionJuegos[7] = ["jugadorCruz" => "daiana", "jugadorCirculo" => "agustina", "puntosCruz" => 1, "puntosCirculo" => 1];
     $coleccionJuegos[8] = ["jugadorCruz" => "euge", "jugadorCirculo" => "maria", "puntosCruz" => 1, "puntosCirculo" => 1];
     $coleccionJuegos[9] = ["jugadorCruz" => "david", "jugadorCirculo" => "sofi", "puntosCruz" => 5, "puntosCirculo" => 0];
+    
+    
 
     
 
@@ -135,9 +137,9 @@ function muestraUnJuego($numeroJuego,$coleccionJuegos){
 
 /**PUNTO 5 (revisar)
  * agrega nuevo juego
- * @param string $coleccionJuegos
- * @param $nuevoJuego
- *@retur string
+ * @param array $coleccionJuegos
+ * @param array $nuevoJuego
+ * @return array
  */
 function agregarJuego ($coleccionJuegos, $nuevoJuego){
      $coleccionJuegos[] = $nuevoJuego;
@@ -149,7 +151,8 @@ function agregarJuego ($coleccionJuegos, $nuevoJuego){
 
 /**PUNTO 6
  * Dada una colección de juegos y el nombre de un jugador, retorne el índice del primer juego ganado por dicho jugador
- * @param string $coleccionJuegos, $nombreJugador
+ * @param string $coleccionJuegos
+ *@param string 
  *@retur int
  */
 function buscarPrimerJuegoGanado ($coleccionJuegos, $nombreJugador){
@@ -167,8 +170,13 @@ function buscarPrimerJuegoGanado ($coleccionJuegos, $nombreJugador){
     return -1; // Jugador no ganó ningún juego
    
 }
+    /*la función busca el primer juego ganado por un 
+    jugador específico en una colección de juegos y devuelve su índice. 
+    Si el jugador no ganó ningún juego, se devuelve -1.*/
 
+/*
 
+*/
 
 
 
