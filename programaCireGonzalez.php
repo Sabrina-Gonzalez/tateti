@@ -69,56 +69,7 @@ function seleccionarOpcion() {
         $opcionElegida=trim(fgets(STDIN));
     }
     return $opcionElegida;
-}
 
-
-// ejemplo que puede estar bien PUNTO 2
-
-/*    <?php 
-
-
-// Función para mostrar el menú y solicitar una opción válida al usuario
-function seleccionarOpcion()
-{
-
-1) Jugar al tateti 
-2) Mostrar un juego 
-3) Mostrar el primer juego ganador
-4) Mostrar porcentaje de Juegos ganados 
-5) Mostrar resumen de Jugador
-6) Mostrar listado de juegos Ordenado por jugador O 
-7) salir
-    $menu  = "1) Jugar al tateti \n";
-    $menu .= "2) Mostrar un juego \n"; // esto es igual a  $menu = $menu."2) Mostrar un juego \n"
-    $menu .= "3) Mostrar el primer juego ganador\n";
-    $menu .= "4) Mostrar porcentaje de Juegos ganados\n";
-    $menu .= "5) Mostrar resumen de Jugador\n";
-    $menu .= "6) Mostrar listado de juegos Ordenado por jugador O ";
-    $menu .= "7) salir\n";
-    
-
-    while (true) {    (En este caso, se utiliza while (true) para 
-                                  crear un bucle que continuará ejecutando el código
-                                   hasta que se cumpla una condición específica, que en este 
-                                    caso es cuando se ingresa una opción válida.)
-        echo $menu;
-        echo "selecciones una opcion: "
-        $opcion = trim(fgest(STDIN));
-
-        if ($opcion >= 1 && $opcion <= 7) {
-            return $opcion;
-        } else {
-            echo "Opción inválida. Por favor, seleccione una opción válida.\n";
-        }
-    }
-}
-
-// Ejemplo de uso
-$opcionSeleccionada = seleccionarOpcion();
-echo "Ha seleccionado la opción: " . $opcionSeleccionada . "\n";
-
-?>
-*/
 
 
 
