@@ -117,7 +117,7 @@ function solicitarNumeroEnRango($min, $max) {
  * @param array $coleccionJuegos
  */
 function muestraUnJuego($numeroJuego,$coleccionJuegos){
-    if ($coleccionJuegos[$numeroJuego]["puntosCruz"] > $coleccionJuegos[$numeroJuego]["puntosCirculo"]){
+    if ($coleccionJuegos[$numeroJuego-1]["puntosCruz"] > $coleccionJuegos[$numeroJuego]["puntosCirculo"]){
         echo "Juego TATETI: ".$numeroJuego. " (gano X) \n";
     }elseif ($coleccionJuegos[$numeroJuego]["puntosCruz"] < $coleccionJuegos[$numeroJuego]["puntosCirculo"]) {
         echo "Juego TATETI: ".$numeroJuego. " (gano O) \n";
