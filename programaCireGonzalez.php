@@ -79,6 +79,7 @@ function seleccionarOpcion() {
  *@param int $max
  * @return int
  */
+    // pegado del excel
 function solicitarNumeroEntre($min, $max)
 {
     //int $numero
