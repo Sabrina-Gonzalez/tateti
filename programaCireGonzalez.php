@@ -10,8 +10,6 @@ include_once("tateti.php");
 
 
 
-
-
 /**************************************/
 /***** DEFINICION DE FUNCIONES ********/
 /**************************************/
@@ -35,7 +33,7 @@ function cargarJuegos() {
     $coleccionJuegos[7] = ["jugadorCruz" => "daiana", "jugadorCirculo" => "agustina", "puntosCruz" => 1, "puntosCirculo" => 1];
     $coleccionJuegos[8] = ["jugadorCruz" => "euge", "jugadorCirculo" => "maria", "puntosCruz" => 1, "puntosCirculo" => 1];
     $coleccionJuegos[9] = ["jugadorCruz" => "david", "jugadorCirculo" => "sofi", "puntosCruz" => 5, "puntosCirculo" => 0];
-    $coleccionJuegos[10]= ["jugadorCruz" => "majo", "jugadorCirculo" => "maria", "puntosCruz" =>5, "puntosCirculo" =>1];
+
     
 
     return $coleccionJuegos;
