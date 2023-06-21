@@ -117,8 +117,6 @@ function solicitarNumeroEnRango($min, $max) {
  * @param array $coleccionJuegos
  */
 function muestraUnJuego($numeroJuego,$coleccionJuegos){
-    //int $cant 
-    $cant=count($coleccionJuegos);
     if ($coleccionJuegos[$numeroJuego]["puntosCruz"] > $coleccionJuegos[$numeroJuego]["puntosCirculo"]){
         echo "Juego TATETI: ".$numeroJuego. " (gano X) \n";
     }elseif ($coleccionJuegos[$numeroJuego]["puntosCruz"] < $coleccionJuegos[$numeroJuego]["puntosCirculo"]) {
@@ -127,9 +125,9 @@ function muestraUnJuego($numeroJuego,$coleccionJuegos){
         echo "Juego TATETI: ".$numeroJuego. " (empate) \n";
     }
 
-    echo "Jugador X: ".$coleccionJuegos[$numeroJuego]["jugadorCruz"]." obtuvo ".$coleccionJuegos[$numeroJuego]["puntosCruz"]." puntos";
-    echo "Jugador O: ".$coleccionJuegos[$numeroJuego]["jugadorCirculo"]." obtuvo ".$coleccionJuegos[$numeroJuego]["puntosCirculo"]." puntos";
-    if ($numeroJuego<$cant || $numeroJuego>$cant){
+    echo "Jugador X: ".$coleccionJuegos[$numeroJuego]["jugadorCruz"]." obtuvo ".$coleccionJuegos[$numeroJuego]["puntosCruz"]." puntos\n";
+    echo "Jugador O: ".$coleccionJuegos[$numeroJuego]["jugadorCirculo"]." obtuvo ".$coleccionJuegos[$numeroJuego]["puntosCirculo"]." puntos\n";
+    if ($numeroJuego<(count($coleccionJuegos)) && $numeroJuego>(count($coleccionJuegos))){
         echo "ERROR. Vuelva a ingresar un numero:";
     }
 }
@@ -195,16 +193,16 @@ function obtenerResumenJugador($coleccionJuegos, $jugador) {
         } elseif ($juego["jugadorCirculo"] === $jugador && $juego["puntosCirculo"] > $juego["puntosCruz"]) {
             $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"] ;
             $resumenJugador["juegosGanados"]+1;
-             $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"]
+             $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"];
         } elseif ($juego["jugadorCruz"] === $jugador && $juego["puntosCruz"] < $juego["puntosCirculo"]) {
             $resumenJugador["juegosPerdidos"]= $resumenJugador["juegosGanados"]+1;
- $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"]
+ $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"];
         } elseif ($juego["jugadorCirculo"] === $jugador && $juego["puntosCirculo"] < $juego["puntosCruz"]) {
             $resumenJugador["juegosPerdidos"]= $resumenJugador["juegosGanados"]+1;
-             $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"]
+             $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"];
         } else {
             $resumenJugador["juegosEmpatados"]= $resumenJugador["juegosGanados"]+1;
- $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"]
+ $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"];
         }
     }
 
@@ -328,3 +326,4 @@ do {
     }
 } while ($opcion != X);
 */
+
