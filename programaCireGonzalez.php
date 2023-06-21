@@ -181,6 +181,8 @@ function buscarPrimerJuegoGanado ($coleccionJuegos, $nombreJugador){
 
 /**PUNTO 7
   *  este modulo obtiene el resumen del jugador
+  *@param array $coleccionJuegos
+  *@param string $jugador
   *@return string
   */
 function obtenerResumenJugador($coleccionJuegos, $jugador) {
@@ -191,7 +193,8 @@ function obtenerResumenJugador($coleccionJuegos, $jugador) {
             $resumenJugador["juegosGanados"]= $resumenJugador["juegosGanados"] + 1 ;//contador
             $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"];// acumulador
         } elseif ($juego["jugadorCirculo"] === $jugador && $juego["puntosCirculo"] > $juego["puntosCruz"]) {
-            $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"] $resumenJugador["juegosGanados"]+1;
+            $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"] ;
+            $resumenJugador["juegosGanados"]+1;
              $resumenJugador["puntosAcumulados"] =  $resumenJugador["puntosAcumulados"]+ $juego["puntosCruz"]
         } elseif ($juego["jugadorCruz"] === $jugador && $juego["puntosCruz"] < $juego["puntosCirculo"]) {
             $resumenJugador["juegosPerdidos"]= $resumenJugador["juegosGanados"]+1;
