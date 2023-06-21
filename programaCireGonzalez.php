@@ -128,7 +128,8 @@ function muestraUnJuego($numeroJuego,$coleccionJuegos){
 
 /**PUNTO 5 
  * agrega nuevo juego
- * @param string $coleccionJuegos, $nuevoJuego
+ * @param string $coleccionJuegos
+ * @param $nuevoJuego
  *@retur string
  */
 function agregarJuego ($coleccionJuegos, $nuevoJuego){
