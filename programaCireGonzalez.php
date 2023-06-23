@@ -69,7 +69,7 @@ function seleccionarOpcion() {
         $opcionElegida=trim(fgets(STDIN));
     }
     return $opcionElegida;
-
+}
 
 
 
