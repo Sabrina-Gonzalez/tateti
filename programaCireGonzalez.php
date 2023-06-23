@@ -272,7 +272,7 @@ function obtenerResumenJugador($coleccionJuegos, $jugador){
  *@param array $coleccionJuegos
  *@return int 
  */
-function cantJuegosGanados($coleccionJuegos){
+function juegosGanados($coleccionJuegos){
     //$cantGanados
     $cantGanados=0;
     for ($i=0; $i <count($coleccionJuegos) ; $i++) { 
