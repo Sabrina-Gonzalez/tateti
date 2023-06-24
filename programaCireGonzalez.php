@@ -23,16 +23,46 @@ function cargarJuegos() {
     $coleccionJuegos = [];
 
     // Ejemplo de 10 juegos
-    $coleccionJuegos[0] = ["jugadorCruz" => "majo", "jugadorCirculo" => "pepe", "puntosCruz" => 5, "puntosCirculo" => 0];
-    $coleccionJuegos[1] = ["jugadorCruz" => "juan", "jugadorCirculo" => "majo", "puntosCruz" => 1, "puntosCirculo" => 1];
-    $coleccionJuegos[2] = ["jugadorCruz" => "ana", "jugadorCirculo" => "lisa", "puntosCruz" => 1, "puntosCirculo" => 1];
-    $coleccionJuegos[3] = ["jugadorCruz" => "pedro", "jugadorCirculo" => "raul", "puntosCruz" => 5, "puntosCirculo" => 0];
-    $coleccionJuegos[4] = ["jugadorCruz" => "raul", "jugadorCirculo" => "natalia", "puntosCruz" => 1, "puntosCirculo" => 1];
-    $coleccionJuegos[5] = ["jugadorCruz" => "francisco", "jugadorCirculo" => "camila", "puntosCruz" => 1, "puntosCirculo" => 1];
-    $coleccionJuegos[6] = ["jugadorCruz" => "micaela", "jugadorCirculo" => "nacho", "puntosCruz" => 5, "puntosCirculo" => 0];
-    $coleccionJuegos[7] = ["jugadorCruz" => "daiana", "jugadorCirculo" => "agustina", "puntosCruz" => 1, "puntosCirculo" => 1];
-    $coleccionJuegos[8] = ["jugadorCruz" => "euge", "jugadorCirculo" => "maria", "puntosCruz" => 1, "puntosCirculo" => 1];
-    $coleccionJuegos[9] = ["jugadorCruz" => "david", "jugadorCirculo" => "sofi", "puntosCruz" => 5, "puntosCirculo" => 0];
+    $coleccionJuegos[0] = ["jugadorCruz" => "majo",
+        "jugadorCirculo" => "pepe", 
+        "puntosCruz" => 5, 
+        "puntosCirculo" => 0];
+    $coleccionJuegos[1] = ["jugadorCruz" => "juan",
+        "jugadorCirculo" => "majo", 
+        "puntosCruz" => 1, 
+            "puntosCirculo" => 1];
+    $coleccionJuegos[2] = ["jugadorCruz" => "ana", 
+        "jugadorCirculo" => "lisa", 
+        "puntosCruz" => 1,
+        "puntosCirculo" => 1];
+    $coleccionJuegos[3] = ["jugadorCruz" => "pedro",
+        "jugadorCirculo" => "raul",
+        "puntosCruz" => 5,
+        "puntosCirculo" => 0];
+    $coleccionJuegos[4] = ["jugadorCruz" => "raul",
+        "jugadorCirculo" => "natalia", 
+        "puntosCruz" => 1, 
+        "puntosCirculo" => 1];
+    $coleccionJuegos[5] = ["jugadorCruz" => "francisco", 
+        "jugadorCirculo" => "camila", 
+        "puntosCruz" => 1, 
+        "puntosCirculo" => 1];
+    $coleccionJuegos[6] = ["jugadorCruz" => "micaela", 
+        "jugadorCirculo" => "nacho", 
+        "puntosCruz" => 5, 
+        "puntosCirculo" => 0];
+    $coleccionJuegos[7] = ["jugadorCruz" => "daiana", 
+        "jugadorCirculo" => "agustina", 
+        "puntosCruz" => 1, 
+        "puntosCirculo" => 1];
+    $coleccionJuegos[8] = ["jugadorCruz" => "euge", 
+        "jugadorCirculo" => "maria", 
+        "puntosCruz" => 1, 
+        "puntosCirculo" => 1];
+    $coleccionJuegos[9] = ["jugadorCruz" => "david",
+        "jugadorCirculo" => "sofi", 
+        "puntosCruz" => 5, 
+        "puntosCirculo" => 0];
     
     
 
@@ -306,6 +336,38 @@ function cantJuegosGanados($coleccionJuegos,$simboloXO){
     }
     return $cantidadGanados;
 }
+
+
+
+/**PUNTO 11
+ *muestra la colección de juegos ordenado por el nombre del jugador cuyo símbolo es O.
+ * @param array $coleccionJuegos
+ */
+
+function ordenarJuegosPorNombreO ($coleccionJuegos){
+    // STRING $nombJugadoresCirculo, $juego
+    $juegosOrdenados = []; // se utiliza para almacenar los juegos ordenados por el nombre del jugador cuyo símbolo es "O".
+    
+    foreach ($coleccionJuegos as $juego) {
+        if ($juego['jugadorCirculo'] !== "O") {
+            continue; // Ignorar juegos donde el símbolo del jugador O no es "O"
+        }
+        $juegosOrdenados[] = $juego; // Agregar el juego a la colección de juegos ordenados
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
