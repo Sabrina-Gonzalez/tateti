@@ -232,10 +232,11 @@ function obtenerResumenJugador($coleccionJuegos, $jugador){
         "puntosAcumulados" => 0
     ];
     foreach ($coleccionJuegos as $juego) {// se recorre cada juego de la colección uno por uno y se asigna a la variable $juegos
-        if ($juego["jugadorCruz"] == $jugador) {
+        if ($juego["jugadorCruz"] == $jugador) {//se verifica si el jugador del juego de la cruz ($juego["jugadorCruz"]) es igual al jugador especificado $jugador.
             //ganò
             if ($juego["puntosCruz"] > $juego["puntosCirculo"]){
                 $resumenJugador["juegosGanados"]= $resumenJugador["juegosGanados"] + 1;
+             
             } elseif ($juego["puntosCirculo"] > $juego["puntosCruz"]) {//perdiò
                 $resumenJugador["juegosPerdidos"]= $resumenJugador["juegosPerdidos"]+1;
             } else { //empate
