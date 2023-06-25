@@ -26,7 +26,7 @@ function cargarJuegos() {
     $coleccionJuegos[0] = ["jugadorCruz" => "majo",
         "jugadorCirculo" => "pepe", 
         "puntosCruz" => 5, 
-        "puntosCirculo" => 0];
+        "puntosCirculo" => 0]; // arrays multimensional
     $coleccionJuegos[1] = ["jugadorCruz" => "juan",
         "jugadorCirculo" => "majo", 
         "puntosCruz" => 1, 
