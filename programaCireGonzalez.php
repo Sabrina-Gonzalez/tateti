@@ -347,17 +347,12 @@ function cantJuegosGanados($coleccionJuegos,$simboloXO){
 function ordenarJuegosPorNombreO ($coleccionJuegos){
     // STRING $nombJugadoresCirculo, $juego
     $juegosOrdenados = []; // se utiliza para almacenar los juegos ordenados por el nombre del jugador cuyo símbolo es "O".
-    
-    foreach ($coleccionJuegos as $juego) {
-        if ($juego['jugadorCirculo'] !== "O") {
-            continue; // Ignorar juegos donde el símbolo del jugador O no es "O"
+     foreach ($coleccionJuegos as $juego) {
+        if ($juego['jugadorCirculo'] === "O") {
+            $juegosOrdenados[] = $juego; // Agregar el juego a la colección de juegos ordenados
         }
-        $juegosOrdenados[] = $juego; // Agregar el juego a la colección de juegos ordenados
-    }
-
+    } 
 }
-
-
 
 
 
