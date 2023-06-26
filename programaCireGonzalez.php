@@ -165,7 +165,7 @@ function muestraUnJuego($numeroJuego,$coleccionJuegos){
 
 
 
-/**PUNTO 5 (revisar)
+/**PUNTO 5
  * agrega nuevo juego
  * @param array $coleccionJuegos
  * @param array $nuevoJuego
@@ -183,34 +183,36 @@ function agregarJuego ($coleccion, $nuevoJuego){
 
 
 
-/**PUNTO 6
- * Dada una colección de juegos y el nombre de un jugador, retorne el índice del primer juego ganado por dicho jugador
- * @param string $coleccionJuegos
- *@param string 
+/*PUNTO 6
+ * Dada una coleccion de juegos y el nombre de un jugador, retorne el indice del primer juego ganado por dicho jugador sino retorna -1
+ * @param array $coleccionJuegos
+ * @param string $nombreJugador
  *@retur int
  */
 function buscarPrimerJuegoGanado ($coleccionJuegos, $nombreJugador){
-    //$indice
-    foreach ($coleccionJuegos as $indice => $juego) {
+    //int $indice,$i
+    $indice =-1;
+    $i=0;
+    while ($i<count($coleccionJuegos) && $indice == -1) {
+        $juego=$coleccionJuegos[$i];
 
-        //determina si un jugador ha ganado un juego en un índice específico de la colección de juegos.
-        if ($juego["jugadorCruz"] == $nombreJugador && $juego["puntosCruz"] > $juego["puntosCirculo"]) {
-            return $indice;
-        } elseif ($juego["jugadorCirculo"] == $nombreJugador && $juego["puntosCirculo"] > $juego["puntosCruz"]) {
-            return $indice;
+        if ($juego["jugadorCruz"]==$nombreJugador) {
+            if ($juego["puntosCruz"] > $juego["puntosCirculo"]) {
+                $indice=$i;
+            }
+        } elseif ($juego["jugadorCirculo"]==$nombreJugador){
+            if ($juego["puntosCirculo"] > $juego["puntosCruz"]) {
+                $indice=$i;
+            }
         }
+        
+        
+        $i++;
     }
-    
-    return -1; // Jugador no ganó ningún juego
-   
+
+
+return $indice;
 }
-    /*la función busca el primer juego ganado por un 
-    jugador específico en una colección de juegos y devuelve su índice. 
-    Si el jugador no ganó ningún juego, se devuelve -1.*/
-
-/*
-
-*/
 
 
 
