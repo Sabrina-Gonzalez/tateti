@@ -398,7 +398,7 @@ function ordenar($coleccionJuegos){
 //print_r($juego);
 //imprimirResultado($juego);
 
-$coleccionJuegos = cargarJuegos();
+$coleccionJuegos = cargarJuegos(); // estructura del juego precargada
 
 
 do {
@@ -416,6 +416,8 @@ do {
             break;
         case 2: 
             //completar qué secuencia de pasos ejecutar si el usuario elige la opción 2
+         echo "ingrese el numero de juego "
+         $nroJuego=trim(fgets(STDIN);
 
 
             
