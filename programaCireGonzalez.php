@@ -424,6 +424,7 @@ do {
         case 3: //Se le solicita al usuario un nombre de jugador y se muestra en
 //               pantalla el primer juego ganado por dicho jugador
             //completar qué secuencia de pasos ejecutar si el usuario elige la opción 3
+<<<<<<< HEAD
             echo "Ingrese el nombre de un jugador:";
             $nombreJ=trim(fgets(STDIN));
             $juegoGanado=buscarPrimerJuegoGanado($coleccionJuegos,$nombreJ);
@@ -436,6 +437,10 @@ do {
             }else {
                 echo "El jugador .$nombreJ. no gano ningun juego";
             }
+=======
+
+
+>>>>>>> 288a518f921dd0ce49a1e41308017409a9599968
             break;
         
          case 4: //Se le solicita al usuario un nombre de jugador y se muestra en
