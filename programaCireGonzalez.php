@@ -398,7 +398,7 @@ function ordenar($coleccionJuegos){
 //print_r($juego);
 //imprimirResultado($juego);
 
-$coleccionJuegos = cargarJuegos(); // estructura del juego precargada
+$coleccion = cargarJuegos(); // estructura del juego precargada
 
 
 do {
@@ -411,15 +411,15 @@ do {
             //completar qué secuencia de pasos ejecutar si el usuario elige la opción 1
             $juego = jugar();
             print_r($juego);
-            print_r($coleccionJuegos);
-            $coleccionJuegos = agregarJuego($coleccionJuegos, $juego);
-            print_r($coleccionJuegos);
+            print_r($coleccion);
+            $coleccion = agregarJuego($coleccion, $juego);
+            print_r($coleccion);
             break;
         case 2: // Mostrar un Juego: Se le solicita al usuario un número de juego y se muestra en pantalla 
             //completar qué secuencia de pasos ejecutar si el usuario elige la opción 2
             echo "ingrese el numero de juego: ";
             $nroJuego=trim(fgets(STDIN));
-            $muestraJuego=muestraUnJuego($nroJuego,$coleccionJuegos);
+            $muestraJuego=muestraUnJuego($nroJuego,$coleccion);
             break;
         case 3: //Se le solicita al usuario un nombre de jugador y se muestra en
 //               pantalla el primer juego ganado por dicho jugador
@@ -427,12 +427,12 @@ do {
 
             echo "Ingrese el nombre de un jugador:";
             $nombreJ=trim(fgets(STDIN));
-            $juegoGanado=buscarPrimerJuegoGanado($coleccionJuegos,$nombreJ);
+            $juegoGanado=buscarPrimerJuegoGanado($coleccion,$nombreJ);
             if ($juegoGanado!=-1) {
             echo "********************************************************\n";
             echo "Juego TATETI :".$juegoGanado."\n";
-            echo "Jugador X :".$coleccionJuegos[$juegoGanado]["jugadorCruz"] ."obtuvo". $coleccionJuegos[$juegoGanado]["puntosCruz"] ."puntos\n";
-            echo "Jugador O:" .$coleccionJuegos[$juegoGanado]["jugadorCirculo"] ."obtuvo". $coleccionJuegos[$juegoGanado]["puntosCirculo"] ."puntos";
+            echo "Jugador X :".$coleccion[$juegoGanado]["jugadorCruz"] ."obtuvo". $coleccion[$juegoGanado]["puntosCruz"] ."puntos\n";
+            echo "Jugador O:" .$coleccion[$juegoGanado]["jugadorCirculo"] ."obtuvo". $coleccion[$juegoGanado]["puntosCirculo"] ."puntos";
             echo "*****************************************************************";
             }else {
                 echo "El jugador .$nombreJ. no gano ningun juego";
