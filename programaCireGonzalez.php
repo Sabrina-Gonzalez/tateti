@@ -406,25 +406,49 @@ do {
 
     
     switch ($opcion) {
-        case 1: 
+        case 1: // se inicia un juego de tateti solicitando los nombres de los jugadores. Luego de finalizar,
+                  //los datos del juego deben ser guardados en una estructura de datos de juegos
             //completar qué secuencia de pasos ejecutar si el usuario elige la opción 1
             $juego = jugar();
-        print_r($juego);
-        print_r($coleccionJuegos);
-        $coleccionJuegos = agregarJuego($coleccionJuegos, $juego);
+            print_r($juego);
+            print_r($coleccionJuegos);
+            $coleccionJuegos = agregarJuego($coleccionJuegos, $juego);
             print_r($coleccionJuegos);
             break;
-        case 2: 
+        case 2: // Mostrar un Juego: Se le solicita al usuario un número de juego y se muestra en pantalla 
             //completar qué secuencia de pasos ejecutar si el usuario elige la opción 2
             echo "ingrese el numero de juego: ";
             $nroJuego=trim(fgets(STDIN));
             $muestraJuego=muestraUnJuego($nroJuego,$coleccionJuegos);
             break;
-        case 3: 
+        case 3: //Se le solicita al usuario un nombre de jugador y se muestra en
+//               pantalla el primer juego ganado por dicho jugador
             //completar qué secuencia de pasos ejecutar si el usuario elige la opción 3
 
             break;
         
-            //...
+         case 4: //Se le solicita al usuario un nombre de jugador y se muestra en
+//               pantalla el primer juego ganado por dicho jugador
+            //completar qué secuencia de pasos ejecutar si el usuario elige la opción 3
+
+            break;
+      case 5: //Se le solicita al usuario un nombre de jugador y se muestra en
+//               pantalla el primer juego ganado por dicho jugador
+            //completar qué secuencia de pasos ejecutar si el usuario elige la opción 3
+
+            break;
+         case 6: //Se le solicita al usuario un nombre de jugador y se muestra en
+//               pantalla el primer juego ganado por dicho jugador
+            //completar qué secuencia de pasos ejecutar si el usuario elige la opción 3
+
+            break;
+         case 7: //Se le solicita al usuario un nombre de jugador y se muestra en
+//               pantalla el primer juego ganado por dicho jugador
+            //completar qué secuencia de pasos ejecutar si el usuario elige la opción 3
+
+            break;
+        
+        
+     
     }
 } while ($opcion != X);
