@@ -431,11 +431,11 @@ do {
             if ($juegoGanado!=-1) {
             echo "********************************************************\n";
             echo "Juego TATETI :".$juegoGanado."\n";
-            echo "Jugador X :".$coleccion[$juegoGanado]["jugadorCruz"] ."obtuvo". $coleccion[$juegoGanado]["puntosCruz"] ."puntos\n";
-            echo "Jugador O:" .$coleccion[$juegoGanado]["jugadorCirculo"] ."obtuvo". $coleccion[$juegoGanado]["puntosCirculo"] ."puntos";
+            echo "Jugador X : ".$coleccion[$juegoGanado]["jugadorCruz"] ." obtuvo ". $coleccion[$juegoGanado]["puntosCruz"] ." puntos\n";
+            echo "Jugador O: " .$coleccion[$juegoGanado]["jugadorCirculo"] ." obtuvo ". $coleccion[$juegoGanado]["puntosCirculo"] ." puntos";
             echo "*****************************************************************";
             }else {
-                echo "El jugador .$nombreJ. no gano ningun juego";
+                echo "El jugador $nombreJ no gano ningun juego";
             }
 
             break;
