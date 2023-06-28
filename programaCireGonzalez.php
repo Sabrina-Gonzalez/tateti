@@ -416,12 +416,9 @@ do {
             break;
         case 2: 
             //completar qué secuencia de pasos ejecutar si el usuario elige la opción 2
-         echo "ingrese el numero de juego "
-         $nroJuego=trim(fgets(STDIN);
-
-
-            
-            $muestraJuego=muestraUnJuego($numeroJuego,$coleccionJuegos);
+            echo "ingrese el numero de juego: ";
+            $nroJuego=trim(fgets(STDIN));
+            $muestraJuego=muestraUnJuego($nroJuego,$coleccionJuegos);
             break;
         case 3: 
             //completar qué secuencia de pasos ejecutar si el usuario elige la opción 3
