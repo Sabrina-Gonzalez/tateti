@@ -342,20 +342,31 @@ function cantJuegosGanados($coleccionJuegos,$simboloXO){
 
 
 
-/**PUNTO 11
- *muestra la colección de juegos ordenado por el nombre del jugador cuyo símbolo es O.
- * @param array $coleccionJuegos
+/**funcion comparacion punto 11
+ * @param array $juego1
+ * @param array $juego2
+ * @return int
  */
+function ordenarJugadorO($juego1, $juego2){
+    // int $orden
+    if ($juego1["jugadorCirculo"] > $juego2["jugadorCirculo"]) {
+        $orden=1;
+    }elseif ($juego1["jugadorCirculo"]<$juego2["jugadorCirculo"]) {
+        $orden=-1;
 
-function ordenarJuegosPorNombreO ($coleccionJuegos){
-    // STRING $juego,
-  // array $juegosOrdenados
-    $juegosOrdenados = []; // se utiliza para almacenar los juegos ordenados por el nombre del jugador cuyo símbolo es "O".
-     foreach ($coleccionJuegos as $juego) {
-        if ($juego['jugadorCirculo'] === "O") {
-            $juegosOrdenados[] = $juego; // Agregar el juego a la colección de juegos ordenados
-        }
-    } 
+    } else {
+        $orden=0;
+    }
+    return $orden;
+  }
+
+ /**PUNTO 11
+* Muestra la coleccion de juegos ordenado por el nombre del jugador que tiene el simbolo O
+* @param array $coleccionJuegos
+*/
+function ordenar($coleccionJuegos){
+    uasort($coleccionJuegos,'ordenarJugadorO');
+    print_r($coleccionJuegos);
 }
 
 
