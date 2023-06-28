@@ -425,6 +425,7 @@ do {
 //               pantalla el primer juego ganado por dicho jugador
             //completar qué secuencia de pasos ejecutar si el usuario elige la opción 3
 
+
             break;
         
          case 4: //Se le solicita al usuario un nombre de jugador y se muestra en
