@@ -155,8 +155,8 @@ function muestraUnJuego($numeroJuego,$coleccionJuegos){
         echo "Juego TATETI: ".$numeroJuego. " (empate) \n";
     }
 
-    echo "Jugador X: ".$coleccionJuegos[$numeroJuego]["jugadorCruz"]." obtuvo ".$coleccionJuegos[$numeroJuego]["puntosCruz"]." puntos\n";
-    echo "Jugador O: ".$coleccionJuegos[$numeroJuego]["jugadorCirculo"]." obtuvo ".$coleccionJuegos[$numeroJuego]["puntosCirculo"]." puntos\n";
+    echo "Jugador X: ".$coleccionJuegos[$numeroJuego-1]["jugadorCruz"]." obtuvo ".$coleccionJuegos[$numeroJuego-1]["puntosCruz"]." puntos\n";
+    echo "Jugador O: ".$coleccionJuegos[$numeroJuego-1]["jugadorCirculo"]." obtuvo ".$coleccionJuegos[$numeroJuego-1]["puntosCirculo"]." puntos\n";
     if ($numeroJuego<(count($coleccionJuegos)) && $numeroJuego>(count($coleccionJuegos))){
         echo "ERROR. Vuelva a ingresar un numero:";
     }
@@ -387,7 +387,7 @@ function ordenar($coleccionJuegos){
 /**************************************/
 
 //Declaración de variables:
-
+//int $nroJuego,$juegoGanado
 
 //Inicialización de variables:
 
