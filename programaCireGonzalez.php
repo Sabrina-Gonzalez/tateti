@@ -402,7 +402,7 @@ $coleccion = cargarJuegos(); // estructura del juego precargada
 
 
 do {
-    $opcion = solicitarNumeroEntre();
+    $opcion = solicitarNumeroEntre(1,7);
 
     
     switch ($opcion) {
