@@ -436,11 +436,11 @@ do {
             $nombreJ=trim(fgets(STDIN));
             $juegoGanado=buscarPrimerJuegoGanado($coleccion,$nombreJ);
             if ($juegoGanado!=-1) {
-            echo "********************************************************\n";
-            echo "Juego TATETI :".$juegoGanado."\n";
+            echo "************************************\n";
+            echo "Juego TATETI :".($juegoGanado+1)."\n";
             echo "Jugador X : ".$coleccion[$juegoGanado]["jugadorCruz"] ." obtuvo ". $coleccion[$juegoGanado]["puntosCruz"] ." puntos\n";
             echo "Jugador O: " .$coleccion[$juegoGanado]["jugadorCirculo"] ." obtuvo ". $coleccion[$juegoGanado]["puntosCirculo"] ." puntos";
-            echo "*****************************************************************";
+            echo "************************************";
             }else {
                 echo "El jugador $nombreJ no gano ningun juego";
             }
