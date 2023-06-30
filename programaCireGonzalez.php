@@ -394,9 +394,10 @@ function ordenar($coleccionJuegos){
 /**************************************/
 
 //Declaración de variables:
-//int $nroJuego,$juegoGanado,$opcion
-//string $nombreJ,$muestraJuego,$nombre
+//int $nroJuego,$juegoGanado,$opcion,$ganados,$ganadosSimbolo
+//string $nombreJ,$muestraJuego,$nombre,$simbolo
 //array $coleccion,$resumen,$ordenJugadorO
+//float $porcentaje
 
 //Inicialización de variables:
 
