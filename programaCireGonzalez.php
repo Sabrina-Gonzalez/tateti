@@ -50,11 +50,11 @@ function cargarJuegos() {
     $coleccionJuegos[6] = ["jugadorCruz" => "micaela", 
         "jugadorCirculo" => "nacho", 
         "puntosCruz" => 5, 
-        "puntosCirculo" => 0];
+        "puntosCirculo" => 7];
     $coleccionJuegos[7] = ["jugadorCruz" => "daiana", 
         "jugadorCirculo" => "agustina", 
         "puntosCruz" => 1, 
-        "puntosCirculo" => 1];
+        "puntosCirculo" => 6];
     $coleccionJuegos[8] = ["jugadorCruz" => "euge", 
         "jugadorCirculo" => "maria", 
         "puntosCruz" => 1, 
