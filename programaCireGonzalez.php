@@ -461,7 +461,13 @@ do {
             echo "Ingrese el nombre de un jugador:";
             $nombre=trim(fgets(STDIN));
             $resumen=obtenerResumenJugador($coleccion,$nombre);
-            print_r($resumen);
+            echo "*************************************\n";
+            echo "Jugador: ".$nombre."\n";
+            echo "Gano: ".$resumen["juegosGanados"]."\n";
+            echo "Perdio: ".$resumen["juegosPerdidos"]."\n";
+            echo "Empato: ".$resumen["juegosEmpatados"]."\n";
+            echo "Total de puntos acumulados: ".$resumen["puntosAcumulados"]." puntos"."\n";
+            echo "***************************************";
             break;
          case 6: /**Se mostrará en pantalla la estructura ordenada alfabéticamente por jugador 0 */
             
