@@ -461,3 +461,14 @@ do {
      
     }
 } while ($opcion != 7);
+
+
+
+// d)  el switch ¿a qué tipo de estructura de control vista en teoría corresponde?
+
+/*La instrucción "switch" en PHP corresponde a una estructura de control conocida como "switch-case" 
+(conmutador o interruptor en español). Esta estructura permite ejecutar diferentes bloques de código dependiendo del 
+valor de una expresión o variable.
+La estructura "switch-case" se utiliza cuando se tienen múltiples casos posibles y se desea realizar 
+acciones diferentes en función del valor de la expresión evaluada. Es similar a una serie de declaraciones "if-else" anidadas,
+pero proporciona una sintaxis más concisa y legible cuando se trabaja con múltiples casos.*/
