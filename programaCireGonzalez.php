@@ -72,10 +72,6 @@ function cargarJuegos() {
 }
 
 
-
-
-
-
 /**Punto 2
  * Retorna la opcion elegida por el usuario
  * @return int
