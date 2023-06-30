@@ -147,20 +147,27 @@ function solicitarNumeroEnRango($min, $max) {
  * @param array $coleccionJuegos
  */
 function muestraUnJuego($numeroJuego,$coleccionJuegos){
-    if ($coleccionJuegos[$numeroJuego-1]["puntosCruz"] > $coleccionJuegos[$numeroJuego]["puntosCirculo"]){
-        echo "Juego TATETI: ".$numeroJuego. " (gano X) \n";
-    }elseif ($coleccionJuegos[$numeroJuego]["puntosCruz"] < $coleccionJuegos[$numeroJuego]["puntosCirculo"]) {
-        echo "Juego TATETI: ".$numeroJuego. " (gano O) \n";
-    }else {
-        echo "Juego TATETI: ".$numeroJuego. " (empate) \n";
-    }
-
-    echo "Jugador X: ".$coleccionJuegos[$numeroJuego-1]["jugadorCruz"]." obtuvo ".$coleccionJuegos[$numeroJuego-1]["puntosCruz"]." puntos\n";
-    echo "Jugador O: ".$coleccionJuegos[$numeroJuego-1]["jugadorCirculo"]." obtuvo ".$coleccionJuegos[$numeroJuego-1]["puntosCirculo"]." puntos\n";
-    if ($numeroJuego<(count($coleccionJuegos)) && $numeroJuego>(count($coleccionJuegos))){
+    //$cartel
+    while ($numeroJuego<1 || $numeroJuego>(count($coleccionJuegos))) {
         echo "ERROR. Vuelva a ingresar un numero:";
+        $numeroJuego=trim(fgets(STDIN));
+    }
+    if ($coleccionJuegos[$numeroJuego-1]["puntosCruz"] > $coleccionJuegos[$numeroJuego-1]["puntosCirculo"]){
+        $cartel="Juego TATETI: ".$numeroJuego. " (gano X) \n";
+    }elseif ($coleccionJuegos[$numeroJuego-1]["puntosCruz"] < $coleccionJuegos[$numeroJuego-1]["puntosCirculo"]) {
+        $cartel="Juego TATETI: ".$numeroJuego. " (gano O) \n";
+    }else {
+        $cartel="Juego TATETI: ".$numeroJuego. " (empate) \n";
+    }
+    if(!($numeroJuego<=0 || $numeroJuego>=11)){
+    echo"**********************************\n";
+    echo " ".$cartel;
+    echo " Jugador X: ".$coleccionJuegos[$numeroJuego-1]["jugadorCruz"]." obtuvo ".$coleccionJuegos[$numeroJuego-1]["puntosCruz"]." puntos\n";
+    echo " Jugador O: ".$coleccionJuegos[$numeroJuego-1]["jugadorCirculo"]." obtuvo ".$coleccionJuegos[$numeroJuego-1]["puntosCirculo"]." puntos\n";
+    echo "**********************************";    
     }
 }
+
 
 
 
