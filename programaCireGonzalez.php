@@ -404,9 +404,9 @@ function ordenar($coleccionJuegos){
 
 //Proceso:
 
-//$juego = jugar();
-//print_r($juego);
-//imprimirResultado($juego);
+$juego = jugar();
+print_r($juego);
+imprimirResultado($juego);
 
 $coleccion = cargarJuegos(); // estructura del juego precargada
 
@@ -419,8 +419,8 @@ do {
         case 1: /*se inicia un juego de tateti solicitando los nombres de los jugadores. Luego de finalizar,
                     los datos del juego deben ser guardados en una estructura de datos de juegos*/
             
-            $juego = jugar();
-            print_r($juego);
+            //$juego = jugar();
+            //print_r($juego);
             print_r($coleccion);
             $coleccion = agregarJuego($coleccion, $juego);
             print_r($coleccion);
