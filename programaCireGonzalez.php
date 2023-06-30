@@ -395,6 +395,7 @@ function ordenar($coleccionJuegos){
 
 //Declaración de variables:
 //int $nroJuego,$juegoGanado
+//string $nombreJ,$muestraJuego
 
 //Inicialización de variables:
 
