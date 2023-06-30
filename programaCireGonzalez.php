@@ -54,11 +54,11 @@ function cargarJuegos() {
     $coleccionJuegos[7] = ["jugadorCruz" => "daiana", 
         "jugadorCirculo" => "agustina", 
         "puntosCruz" => 1, 
-        "puntosCirculo" => 1];
+        "puntosCirculo" => 5];
     $coleccionJuegos[8] = ["jugadorCruz" => "euge", 
         "jugadorCirculo" => "maria", 
         "puntosCruz" => 1, 
-        "puntosCirculo" => 1];
+        "puntosCirculo" => 5];
     $coleccionJuegos[9] = ["jugadorCruz" => "david",
         "jugadorCirculo" => "sofi", 
         "puntosCruz" => 5, 
@@ -99,41 +99,8 @@ function seleccionarOpcion() {
 
 
 
-/**Punto 3
- * Retorna un numero valido segun el rango
- *@param int $min 
- *@param int $max
- * @return int
- */
-    // pegado del excel
-function solicitarNumeroEntre($min, $max)
-{
-    //int $numero
-    $numero = trim(fgets(STDIN));
-    while (!is_int($numero) && !($numero >= $min && $numero <= $max)) {
-        echo "Debe ingresar un número entre " . $min . " y " . $max . ": ";
-        $numero = trim(fgets(STDIN));
-    }
-    return $numero;
-}
-    
-/*
-function solicitarNumeroEnRango($min, $max) {
-    $numeroValido = false;
-
-    while ($numeroValido=true) {
-       echo ("Ingrese un número entre $min y $max: ");
-         $numero = trim(fgets(STDIN));
-
-        if ($numero >= $min && $numero <= $max) {
-            $numeroValido = true;
-        } else {
-            echo "Número inválido. Por favor, ingrese un número válido dentro del rango.\n";
-        }
-    }
-
-    return $numero;
-}
+/**Punto 3*/
+$minimoMaximo=solicitarNumeroEntre($min,$max);
 
 
 
