@@ -99,8 +99,23 @@ function seleccionarOpcion() {
 
 
 
-/**Punto 3*/
-$minimoMaximo=solicitarNumeroEntre($min,$max);
+/**Punto 3
+*solicite al usuario un número entre un rango de valores. Si el número 
+ingresado por el usuario no es válido, la función se encarga de volver a pedirlo. La función retorna un 
+número válido.
+*return int
+*/
+
+function rango(){
+    //int $minimoMaximo,$minimo,$maximo
+    echo "Ingrese un Numero Minimo:";
+    $minimo=trim(fgets(STDIN));
+    echo "Ingrese un Numero Maximo:";
+    $maximo=trim(fgets(STDIN));
+    $minimoMaximo=solicitarNumeroEntre($minimo,$maximo);
+    return $minimoMaximo;
+}
+
 
 
 
@@ -439,7 +454,7 @@ do {
 
             break;
          case 7: //Sale del Programa
-
+            echo "SALISTE DEL JUEGO";
             break;
         
         
