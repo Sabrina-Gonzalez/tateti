@@ -50,11 +50,11 @@ function cargarJuegos() {
     $coleccionJuegos[6] = ["jugadorCruz" => "micaela", 
         "jugadorCirculo" => "nacho", 
         "puntosCruz" => 5, 
-        "puntosCirculo" => 7];
+        "puntosCirculo" => 0];
     $coleccionJuegos[7] = ["jugadorCruz" => "daiana", 
         "jugadorCirculo" => "agustina", 
         "puntosCruz" => 1, 
-        "puntosCirculo" => 6];
+        "puntosCirculo" => 1];
     $coleccionJuegos[8] = ["jugadorCruz" => "euge", 
         "jugadorCirculo" => "maria", 
         "puntosCruz" => 1, 
@@ -449,8 +449,11 @@ do {
         
          case 4: /**Se le solicita al usuario que elija uno de los símbolos (X o O), y 
                     se muestra qué porcentaje de todos los juegos ganados, el ganador es el símbolo elegido por el usuario */
-            
-
+                $simbolo=simboloElegido();
+                $ganados=juegosGanados($coleccion);
+                $ganadosSimbolo=cantJuegosGanados($coleccion,$simbolo);
+                $porcentaje=$ganadosSimbolo*100/$ganados;
+                echo $simbolo. " gano el ".$porcentaje." % de los juegos ganados";
             break;
         case 5: /*Se le solicita al usuario un nombre de jugador y se muestra en pantalla 
                     un resumen de los juegos ganados, los juegos perdidos, empates y acumulado de puntos*/
@@ -472,4 +475,4 @@ do {
         
      
     }
-} while ($opcion != X);
+} while ($opcion != 7);
