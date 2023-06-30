@@ -395,7 +395,8 @@ function ordenar($coleccionJuegos){
 
 //Declaración de variables:
 //int $nroJuego,$juegoGanado
-//string $nombreJ,$muestraJuego
+//string $nombreJ,$muestraJuego,$nombre
+//array $coleccion,$resumen
 
 //Inicialización de variables:
 
@@ -437,11 +438,11 @@ do {
             $nombreJ=trim(fgets(STDIN));
             $juegoGanado=buscarPrimerJuegoGanado($coleccion,$nombreJ);
             if ($juegoGanado!=-1) {
-            echo "************************************\n";
-            echo "Juego TATETI :".($juegoGanado+1)."\n";
-            echo "Jugador X : ".$coleccion[$juegoGanado]["jugadorCruz"] ." obtuvo ". $coleccion[$juegoGanado]["puntosCruz"] ." puntos\n";
-            echo "Jugador O: " .$coleccion[$juegoGanado]["jugadorCirculo"] ." obtuvo ". $coleccion[$juegoGanado]["puntosCirculo"] ." puntos";
-            echo "************************************";
+                echo "************************************\n";
+                echo "Juego TATETI :".($juegoGanado+1)."\n";
+                echo "Jugador X : ".$coleccion[$juegoGanado]["jugadorCruz"] ." obtuvo ". $coleccion[$juegoGanado]["puntosCruz"] ." puntos\n";
+                echo "Jugador O: " .$coleccion[$juegoGanado]["jugadorCirculo"] ." obtuvo ". $coleccion[$juegoGanado]["puntosCirculo"] ." puntos\n";
+                echo "************************************";
             }else {
                 echo "El jugador $nombreJ no gano ningun juego";
             }
@@ -456,7 +457,10 @@ do {
         case 5: //Se le solicita al usuario un nombre de jugador y se muestra en
 //               pantalla el primer juego ganado por dicho jugador
             //completar qué secuencia de pasos ejecutar si el usuario elige la opción 3
-
+            echo "Ingrese el nombre de un jugador:";
+            $nombre=trim(fgets(STDIN));
+            $resumen=obtenerResumenJugador($coleccion,$nombre);
+            print_r($resumen);
             break;
          case 6: //Se le solicita al usuario un nombre de jugador y se muestra en
 //               pantalla el primer juego ganado por dicho jugador
