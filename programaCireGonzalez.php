@@ -394,9 +394,9 @@ function ordenar($coleccionJuegos){
 /**************************************/
 
 //Declaración de variables:
-//int $nroJuego,$juegoGanado
+//int $nroJuego,$juegoGanado,$opcion
 //string $nombreJ,$muestraJuego,$nombre
-//array $coleccion,$resumen
+//array $coleccion,$resumen,$ordenJugadorO
 
 //Inicialización de variables:
 
@@ -415,24 +415,22 @@ do {
 
     
     switch ($opcion) {
-        case 1: // se inicia un juego de tateti solicitando los nombres de los jugadores. Luego de finalizar,
-                  //los datos del juego deben ser guardados en una estructura de datos de juegos
-            //completar qué secuencia de pasos ejecutar si el usuario elige la opción 1
+        case 1: /*se inicia un juego de tateti solicitando los nombres de los jugadores. Luego de finalizar,
+                    los datos del juego deben ser guardados en una estructura de datos de juegos*/
+            
             $juego = jugar();
             print_r($juego);
             print_r($coleccion);
             $coleccion = agregarJuego($coleccion, $juego);
             print_r($coleccion);
             break;
-        case 2: // Mostrar un Juego: Se le solicita al usuario un número de juego y se muestra en pantalla 
-            //completar qué secuencia de pasos ejecutar si el usuario elige la opción 2
-            echo "ingrese el numero de juego: ";
+        case 2: //Se le solicita al usuario un número de juego y se muestra en pantalla 
+            
+            echo "Ingrese el numero de juego: ";
             $nroJuego=trim(fgets(STDIN));
             $muestraJuego=muestraUnJuego($nroJuego,$coleccion);
             break;
-        case 3: //Se le solicita al usuario un nombre de jugador y se muestra en
-//               pantalla el primer juego ganado por dicho jugador
-            //completar qué secuencia de pasos ejecutar si el usuario elige la opción 3
+        case 3: /*Se le solicita al usuario un nombre de jugador y se muestra enpantalla el primer juego ganado por dicho jugador*/
 
             echo "Ingrese el nombre de un jugador:";
             $nombreJ=trim(fgets(STDIN));
@@ -449,27 +447,25 @@ do {
 
             break;
         
-         case 4: //Se le solicita al usuario un nombre de jugador y se muestra en
-//               pantalla el primer juego ganado por dicho jugador
-            //completar qué secuencia de pasos ejecutar si el usuario elige la opción 3
+         case 4: /**Se le solicita al usuario que elija uno de los símbolos (X o O), y 
+                    se muestra qué porcentaje de todos los juegos ganados, el ganador es el símbolo elegido por el usuario */
+            
 
             break;
-        case 5: //Se le solicita al usuario un nombre de jugador y se muestra en
-//               pantalla el primer juego ganado por dicho jugador
-            //completar qué secuencia de pasos ejecutar si el usuario elige la opción 3
+        case 5: /*Se le solicita al usuario un nombre de jugador y se muestra en pantalla 
+                    un resumen de los juegos ganados, los juegos perdidos, empates y acumulado de puntos*/
+
             echo "Ingrese el nombre de un jugador:";
             $nombre=trim(fgets(STDIN));
             $resumen=obtenerResumenJugador($coleccion,$nombre);
             print_r($resumen);
             break;
-         case 6: //Se le solicita al usuario un nombre de jugador y se muestra en
-//               pantalla el primer juego ganado por dicho jugador
-            //completar qué secuencia de pasos ejecutar si el usuario elige la opción 3
+         case 6: /**Se mostrará en pantalla la estructura ordenada alfabéticamente por jugador 0 */
+            
+            $ordenJugadorO=ordenar($coleccion);
 
             break;
-         case 7: //Se le solicita al usuario un nombre de jugador y se muestra en
-//               pantalla el primer juego ganado por dicho jugador
-            //completar qué secuencia de pasos ejecutar si el usuario elige la opción 3
+         case 7: //Sale del Programa
 
             break;
         
