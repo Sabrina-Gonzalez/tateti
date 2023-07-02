@@ -79,6 +79,7 @@ function cargarJuegos() {
 function seleccionarOpcion() {
     //$opcionElegida
     echo "    
+    
     Menu de Opciones
       1) Jugar al tateti 
       2) Mostrar un juego
@@ -88,7 +89,7 @@ function seleccionarOpcion() {
       6) Mostrar listado de juegos ordenado por jugador O
       7) Salir
     
-    Elegir una Opcion: \n";
+    Elegir una Opcion: ";
     $opcionElegida=trim(fgets(STDIN));
     
     while ($opcionElegida < 1 || $opcionElegida > 7) {
@@ -414,6 +415,7 @@ do {
             $nombreJ=trim(fgets(STDIN));
             $juegoGanado=buscarPrimerJuegoGanado($coleccion,$nombreJ);
             if ($juegoGanado!=-1) {
+                echo "\n";
                 echo "************************************\n";
                 echo "Juego TATETI :".($juegoGanado+1)."\n";
                 echo "Jugador X : ".$coleccion[$juegoGanado]["jugadorCruz"] ." obtuvo ". $coleccion[$juegoGanado]["puntosCruz"] ." puntos\n";
