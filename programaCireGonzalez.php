@@ -78,14 +78,15 @@ function cargarJuegos() {
  */
 function seleccionarOpcion() {
     //$opcionElegida
-    echo "    Menu de Opciones
-    1) Jugar al tateti 
-    2) Mostrar un juego
-    3) Mostrar el primer juego ganador
-    4) Mostrar porcentaje de juegos ganados 
-    5) Mostrar resumen de jugador 
-    6) Mostrar listado de juegos ordenado por jugador O
-    7) Salir
+    echo "    
+    Menu de Opciones
+      1) Jugar al tateti 
+      2) Mostrar un juego
+      3) Mostrar el primer juego ganador
+      4) Mostrar porcentaje de juegos ganados 
+      5) Mostrar resumen de jugador 
+      6) Mostrar listado de juegos ordenado por jugador O
+      7) Salir
     
     Elegir una Opcion: ";
     $opcionElegida=trim(fgets(STDIN));
@@ -137,12 +138,12 @@ function muestraUnJuego($numeroJuego,$coleccionJuegos){
     }else {
         $cartel="Juego TATETI: ".$numeroJuego. " (empate) \n";
     }
-    if(!($numeroJuego<=0 || $numeroJuego>=11)){
+    if(!($numeroJuego<=0 || $numeroJuego>=20)){
     echo"**********************************\n";
     echo " ".$cartel;
     echo " Jugador X: ".$coleccionJuegos[$numeroJuego-1]["jugadorCruz"]." obtuvo ".$coleccionJuegos[$numeroJuego-1]["puntosCruz"]." puntos\n";
     echo " Jugador O: ".$coleccionJuegos[$numeroJuego-1]["jugadorCirculo"]." obtuvo ".$coleccionJuegos[$numeroJuego-1]["puntosCirculo"]." puntos\n";
-    echo "**********************************";    
+    echo "**********************************\n";    
     }
 }
 
@@ -382,24 +383,23 @@ function ordenar($coleccionJuegos){
 
 //Proceso:
 
-$juego = jugar();
-print_r($juego);
-imprimirResultado($juego);
+//$juego = jugar();
+//print_r($juego);
+//imprimirResultado($juego);
 
 $coleccion = cargarJuegos(); // estructura del juego precargada
 
 
 do {
-    $opcion = solicitarNumeroEntre(1,7);
+    $opcion =seleccionarOpcion();
 
     
     switch ($opcion) {
         case 1: /*se inicia un juego de tateti solicitando los nombres de los jugadores. Luego de finalizar,
                     los datos del juego deben ser guardados en una estructura de datos de juegos*/
             
-            //$juego = jugar();
-            //print_r($juego);
-            print_r($coleccion);
+            $juego = jugar();
+            imprimirResultado($juego);
             $coleccion = agregarJuego($coleccion, $juego);
             print_r($coleccion);
             break;
