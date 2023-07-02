@@ -209,7 +209,7 @@ return $indice;
   *  este modulo obtiene el resumen del jugador
   *@param array $coleccionJuegos
   *@param string $jugador
-  *@return string
+  *@return array
   */
 function obtenerResumenJugador($coleccionJuegos, $jugador){
     $resumenJugador = [ 
