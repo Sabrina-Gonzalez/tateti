@@ -88,7 +88,7 @@ function seleccionarOpcion() {
       6) Mostrar listado de juegos ordenado por jugador O
       7) Salir
     
-    Elegir una Opcion: ";
+    Elegir una Opcion: \n";
     $opcionElegida=trim(fgets(STDIN));
     
     while ($opcionElegida < 1 || $opcionElegida > 7) {
@@ -410,7 +410,7 @@ do {
             break;
         case 3: /*Se le solicita al usuario un nombre de jugador y se muestra enpantalla el primer juego ganado por dicho jugador*/
 
-            echo "Ingrese el nombre de un jugador:";
+            echo "Ingrese el nombre de un jugador: ";
             $nombreJ=trim(fgets(STDIN));
             $juegoGanado=buscarPrimerJuegoGanado($coleccion,$nombreJ);
             if ($juegoGanado!=-1) {
@@ -420,7 +420,7 @@ do {
                 echo "Jugador O: " .$coleccion[$juegoGanado]["jugadorCirculo"] ." obtuvo ". $coleccion[$juegoGanado]["puntosCirculo"] ." puntos\n";
                 echo "************************************";
             }else {
-                echo "El jugador $nombreJ no gano ningun juego";
+                echo "El jugador $nombreJ no gano ningun juego\n";
             }
 
             break;
@@ -436,7 +436,7 @@ do {
         case 5: /*Se le solicita al usuario un nombre de jugador y se muestra en pantalla 
                     un resumen de los juegos ganados, los juegos perdidos, empates y acumulado de puntos*/
 
-            echo "Ingrese el nombre de un jugador:";
+            echo "Ingrese el nombre de un jugador: ";
             $nombre=trim(fgets(STDIN));
             $resumen=obtenerResumenJugador($coleccion,$nombre);
             echo "*************************************\n";
