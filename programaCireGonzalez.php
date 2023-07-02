@@ -158,9 +158,7 @@ function muestraUnJuego($numeroJuego,$coleccionJuegos){
  * @return array
  */
 function agregarJuego ($coleccion, $nuevoJuego){
-     
-    
-    
+     //array $coleccion
     //$coleccionJuegos[count($coleccion)] = $nuevoJuego;
     array_push($coleccion, $nuevoJuego);
      return $coleccion;
@@ -212,6 +210,7 @@ return $indice;
   *@return array
   */
 function obtenerResumenJugador($coleccionJuegos, $jugador){
+    //array $resumenJugador
     $resumenJugador = [ 
         "nombre" => $jugador,
         "juegosGanados" => 0,
