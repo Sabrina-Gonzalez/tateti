@@ -412,10 +412,11 @@ do {
         case 3: /*Se le solicita al usuario un nombre de jugador y se muestra enpantalla el primer juego ganado por dicho jugador*/
 
             echo "Ingrese el nombre de un jugador: ";
-            $nombreJ=trim(fgets(STDIN))."\n";
+            $nombreJ=trim(fgets(STDIN));
             $juegoGanado=buscarPrimerJuegoGanado($coleccion,$nombreJ);
             if ($juegoGanado!=-1) {
-                echo "************************************\n";
+                echo
+                     "************************************\n";
                 echo "Juego TATETI :".($juegoGanado+1)."\n";
                 echo "Jugador X : ".$coleccion[$juegoGanado]["jugadorCruz"] ." obtuvo ". $coleccion[$juegoGanado]["puntosCruz"] ." puntos\n";
                 echo "Jugador O: " .$coleccion[$juegoGanado]["jugadorCirculo"] ." obtuvo ". $coleccion[$juegoGanado]["puntosCirculo"] ." puntos\n";
