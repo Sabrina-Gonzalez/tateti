@@ -408,7 +408,7 @@ do {
             $juego = jugar();
             imprimirResultado($juego);
             $coleccion = agregarJuego($coleccion, $juego);
-            print_r($coleccion);
+            //print_r($coleccion);
             break;
         case 2: //Se le solicita al usuario un número de juego y se muestra en pantalla 
             
