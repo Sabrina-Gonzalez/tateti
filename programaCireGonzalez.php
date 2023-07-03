@@ -414,7 +414,11 @@ do {
             
             echo "Ingrese el numero de juego: ";
             $nroJuego=trim(fgets(STDIN));
-            $muestraJuego=muestraUnJuego($nroJuego,$coleccion);
+            if ($nroJuego <count($coleccion) && $nroJuego>count($coleccion){
+                  $muestraJuego=muestraUnJuego($nroJuego,$coleccion);
+            }else {
+             echo "NO HYA DATOS";
+            }
             break;
         case 3: /*Se le solicita al usuario un nombre de jugador y se muestra enpantalla el primer juego ganado por dicho jugador*/
 
@@ -445,7 +449,7 @@ do {
                     un resumen de los juegos ganados, los juegos perdidos, empates y acumulado de puntos*/
 
             echo "Ingrese el nombre de un jugador: ";
-            $nombre=trim(fgets(STDIN));
+            $nombre=strtoupper(trim(fgets(STDIN)));
             $resumen=obtenerResumenJugador($coleccion,$nombre);
             echo "*************************************\n";
             echo "Jugador: ".$nombre."\n";
@@ -457,7 +461,7 @@ do {
             break;
          case 6: /**Se mostrará en pantalla la estructura ordenada alfabéticamente por jugador 0 */
             
-            $ordenJugadorO=ordenar($coleccion);
+           ordenar($coleccion);
 
             break;
          case 7: //Sale del Programa
