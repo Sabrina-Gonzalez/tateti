@@ -20,6 +20,7 @@ include_once("tateti.php");
 */
 function cargarJuegos() {
     //incializacion del arrays
+    /*
     $coleccionJuegos = [];
 
     // Ejemplo de 10 juegos
@@ -63,7 +64,23 @@ function cargarJuegos() {
         "jugadorCirculo" => "sofi", 
         "puntosCruz" => 5, 
         "puntosCirculo" => 0];
-    
+*/
+       
+        $coleccionJuegos = [];
+
+        $jg1 = ["jugadorCruz" => "AMARILIS", "jugadorCirculo" => "MILOS",    "puntosCruz" => 1, "puntosCirculo" => 1];
+        $jg2 = ["jugadorCruz" => "ZENDA",    "jugadorCirculo" => "AMARILIS", "puntosCruz" => 3, "puntosCirculo" => 0];
+        $jg3 = ["jugadorCruz" => "ZENDA",    "jugadorCirculo" => "MILOS",    "puntosCruz" => 0, "puntosCirculo" => 4];
+        $jg4 = ["jugadorCruz" => "CALIXTO",  "jugadorCirculo" => "TRUMAN",   "puntosCruz" => 1, "puntosCirculo" => 1];
+        $jg5 = ["jugadorCruz" => "AMARILIS", "jugadorCirculo" => "MILOS",    "puntosCruz" => 5, "puntosCirculo" => 0];
+        $jg6 = ["jugadorCruz" => "FEDORA",   "jugadorCirculo" => "CALIXTO",  "puntosCruz" => 0, "puntosCirculo" => 3];
+        $jg7 = ["jugadorCruz" => "TRUMAN",   "jugadorCirculo" => "AMARILIS", "puntosCruz" => 4, "puntosCirculo" => 0];
+        $jg8 = ["jugadorCruz" => "CALIXTO",  "jugadorCirculo" => "TRUMAN",   "puntosCruz" => 1, "puntosCirculo" => 1];
+        $jg9 = ["jugadorCruz" => "TRUMAN",   "jugadorCirculo" => "FEDORA",   "puntosCruz" => 2, "puntosCirculo" => 0];
+        $jg10= ["jugadorCruz" => "MILOS",    "jugadorCirculo" => "ZENDA",   "puntosCruz" => 1, "puntosCirculo" => 1];
+        
+        array_push($coleccionJuegos, $jg1, $jg2, $jg3, $jg4, $jg5, $jg6, $jg7, $jg8, $jg9, $jg10);
+        
     
 
     
@@ -139,13 +156,13 @@ function muestraUnJuego($numeroJuego,$coleccionJuegos){
     }else {
         $cartel="Juego TATETI: ".$numeroJuego. " (empate) \n";
     }
-    if(!($numeroJuego<=0 || $numeroJuego>=20)){
+    //if(!($numeroJuego<=0 || $numeroJuego>=200)){
     echo"**********************************\n";
     echo " ".$cartel;
     echo " Jugador X: ".$coleccionJuegos[$numeroJuego-1]["jugadorCruz"]." obtuvo ".$coleccionJuegos[$numeroJuego-1]["puntosCruz"]." puntos\n";
     echo " Jugador O: ".$coleccionJuegos[$numeroJuego-1]["jugadorCirculo"]." obtuvo ".$coleccionJuegos[$numeroJuego-1]["puntosCirculo"]." puntos\n";
     echo "**********************************\n";    
-    }
+    //}
 }
 
 
@@ -168,7 +185,7 @@ function agregarJuego ($coleccion, $nuevoJuego){
 
 
 
-/*PUNTO 6
+/** PUNTO 6
  * Dada una coleccion de juegos y el nombre de un jugador, retorne el indice del primer juego ganado por dicho jugador sino retorna -1
  * @param array $coleccionJuegos
  * @param string $nombreJugador
