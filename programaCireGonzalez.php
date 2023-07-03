@@ -440,7 +440,7 @@ do {
             break;
          case 6: /**Se mostrará en pantalla la estructura ordenada alfabéticamente por jugador 0 */
             
-            $ordenJugadorO=ordenar($coleccion);
+           ordenar($coleccion);
 
             break;
          case 7: //Sale del Programa
