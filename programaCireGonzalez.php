@@ -380,8 +380,8 @@ function ordenar($coleccionJuegos){
 /**************************************/
 
 //Declaración de variables:
-//int $nroJuego,$juegoGanado,$opcion,$ganados,$ganadosSimbolo
-//string $nombreJ,$muestraJuego,$nombre,$simbolo
+//int $nroJuego,$juegoGanado,$opcion,$ganados,$ganadosSimbolo,$entreRango
+//string $nombreJ,$nombre,$simbolo
 //array $coleccion,$resumen,$ordenJugadorO
 //float $porcentaje
 
@@ -413,11 +413,7 @@ do {
         case 2: //Se le solicita al usuario un número de juego y se muestra en pantalla 
             
             $entreRango=rango($coleccion);
-            if ($nroJuego <count($coleccion) && $nroJuego>count($coleccion)){
-                  $muestraJuego=muestraUnJuego($nroJuego,$coleccion);
-            }else {
-             echo "NO HAY DATOS";
-            }
+            muestraUnJuego($entreRango,$coleccion);
             break;
         case 3: /*Se le solicita al usuario un nombre de jugador y se muestra enpantalla el primer juego ganado por dicho jugador*/
 
