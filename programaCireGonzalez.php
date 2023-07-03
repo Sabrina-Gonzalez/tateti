@@ -414,10 +414,10 @@ do {
             
             echo "Ingrese el numero de juego: ";
             $nroJuego=trim(fgets(STDIN));
-            if ($nroJuego <count($coleccion) && $nroJuego>count($coleccion){
+            if ($nroJuego <count($coleccion) && $nroJuego>count($coleccion)){
                   $muestraJuego=muestraUnJuego($nroJuego,$coleccion);
             }else {
-             echo "NO HYA DATOS";
+             echo "NO HAY DATOS";
             }
             break;
         case 3: /*Se le solicita al usuario un nombre de jugador y se muestra enpantalla el primer juego ganado por dicho jugador*/
