@@ -125,12 +125,12 @@ número válido.
 *return int
 */
 
-function rango(){
+function rango($coleccionJuegos){
     //int $minimoMaximo,$minimo,$maximo
-    echo "Ingrese un Numero Minimo:";
-    $minimo=trim(fgets(STDIN));
-    echo "Ingrese un Numero Maximo:";
-    $maximo=trim(fgets(STDIN));
+
+    $minimo=1;
+    $maximo=count($coleccionJuegos);
+    echo "Ingrese un Numero de juego entre $minimo y $maximo:";
     $minimoMaximo=solicitarNumeroEntre($minimo,$maximo);
     return $minimoMaximo;
 }
@@ -412,8 +412,7 @@ do {
             break;
         case 2: //Se le solicita al usuario un número de juego y se muestra en pantalla 
             
-            echo "Ingrese el numero de juego: ";
-            $nroJuego=trim(fgets(STDIN));
+            $entreRango=rango($coleccion);
             if ($nroJuego <count($coleccion) && $nroJuego>count($coleccion)){
                   $muestraJuego=muestraUnJuego($nroJuego,$coleccion);
             }else {
